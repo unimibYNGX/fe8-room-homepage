@@ -1,37 +1,130 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 * {
-    font-family: "League Spartan", sans-serif;
+  font-family: "League Spartan", sans-serif;
+}
+
+@media only screen and (min-width: 1070px) {
 
 }
 
 body {
-    margin: 0;
+  margin: 0;
+  height: 90vh;
+  min-height: 90vh;
+  width: 100%;
 }
 
 :root {
-    --darkgray: hsl(0,0%,63%);
-    --black: hsl(0,0%,0%);
-    --white: hsl(0,0%,100%);
-    --verydarkgray: hsl(0,0%,27%);
+  --darkgray: hsl(0, 0%, 63%);
+  --black: hsl(0, 0%, 0%);
+  --white: hsl(0, 0%, 100%);
+  --verydarkgray: hsl(0, 0%, 27%);
 }
 
 .bar {
-    position: absolute;
-    color: white;
-    display: flex;
-    margin-top: 40px;
-    margin-left: 40px;
+  position: absolute;
+  color: white;
+  display: flex;
+  margin-top: 60px;
+  margin-left: 60px;
 }
 
 .bar .btn {
-    margin-right: 20px;
+  margin-right: 30px;
+}
+
+.bar .logo {
+  margin-right: 50px;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
 
 .btn {
-    cursor: pointer;
+  cursor: pointer;
 }
+
+.row1,
+.row2 {
+  display: flex;
+}
+
+.row1 {
+  /* height: 60%; */
+  height: 60vh;
+}
+
+.row2 {
+  height: 40vh;
+}
+
+.img-hero-1 {
+  object-fit: cover;
+  width: 60%;
+}
+
+.block1-1 {
+  padding: 100px;
+  width: auto;
+  box-sizing: border-box;
+}
+
+.div-about-left {
+  width: 30%;
+  height: inherit;
+}
+.img-about-left {
+  width: 100%;
+  height: inherit;
+  object-fit: cover;
+}
+
+.block2 {
+  padding: 50px;
+  width: 40%;
+  box-sizing: border-box;
+}
+
+.div-about-right {
+  height: inherit;
+  width: 30%;
+}
+.img-about-right {
+  width: 100%;
+  height: inherit;
+  object-fit: cover;
+}
+
+h1 {
+  letter-spacing: -0.5px;
+  font-weight: 600;
+}
+
+h2 {
+  letter-spacing: 5px;
+  font-size: 16px;
+}
+
+h4 {
+    font-weight: 550;
+    font-size: 12.5px;
+    letter-spacing: 10px;
+}
+
+h5 {
+  line-height: 15px;
+  font-weight: 500;
+  color: var(--darkgray);
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: var(--verydarkgray)
+}
+
+
