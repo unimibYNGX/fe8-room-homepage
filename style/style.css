@@ -68,8 +68,34 @@ body {
 .block1-1 {
   padding: 100px;
   width: auto;
+  height: auto;
   box-sizing: border-box;
   max-width: 70ch;
+
+  position: relative;
+}
+/*child*/
+.arrow-left-right {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.img-icon-angle-left {
+  background-color: black;
+  padding: 20px;
+  width: 12px;
+}
+.img-icon-angle-right {
+  background-color: black;
+  padding: 15px;
+}
+
+.rotateimg180 {
+  -webkit-transform:rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .div-about-left {
@@ -119,7 +145,8 @@ h5 {
   line-height: 15px;
   font-weight: 500;
   color: var(--darkgray);
-  text-align: justify;
+  /* text-align: justify; */
+  /* text-justify: inter-word; */
 }
 
 a,
@@ -130,4 +157,14 @@ a:active {
   color: var(--verydarkgray)
 }
 
+.btn-shop-now {
+  display: flex;
+  flex-wrap: nowrap;
+}
 
+.img-arrow {
+  align-self: center;
+  margin-left: 20px;
+  width: 50px;
+  height: 100%;
+}
