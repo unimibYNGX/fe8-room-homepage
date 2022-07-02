@@ -2,16 +2,23 @@
 
 * {
   font-family: "League Spartan", sans-serif;
+  /* border: 1px solid red; */
+  box-shadow:inset 0px 0px 0px 1px #f00;
 }
 
 @media only screen and (min-width: 1070px) {
+}
 
+html {
+  height: 100%;
+
+  /* overflow: hidden; */
 }
 
 body {
   margin: 0;
-  height: 90vh;
-  min-height: 90vh;
+  /* height: 100vh; */
+  min-height: 100%;
   width: 100%;
 }
 
@@ -53,7 +60,7 @@ body {
 
 .row1 {
   /* height: 60%; */
-  height: 65vh;
+  height: 66.66vh;
 }
 
 .row2 {
@@ -66,11 +73,15 @@ body {
 }
 
 .block1-1 {
-  padding: 100px;
+  padding: 75px;
   width: auto;
   height: auto;
   box-sizing: border-box;
   max-width: 70ch;
+
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
 
   position: relative;
 }
@@ -80,18 +91,22 @@ body {
   left: 0;
   bottom: 0;
 }
-.img-icon-angle-left {
+.img-icon-angle {
   background-color: black;
-  padding: 20px;
+  padding: 20px 25px 20px 25px;
   width: 12px;
 }
-.img-icon-angle-right {
-  background-color: black;
-  padding: 15px;
+.angle-left {
+  float: left;
+}
+.angle-left,
+.angle-right {
+  display: block;
+  /* removes the gap that appears when pos. is abs. and bottom is 0 */
 }
 
 .rotateimg180 {
-  -webkit-transform:rotate(180deg);
+  -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
@@ -99,7 +114,7 @@ body {
 }
 
 .div-about-left {
-  width: 30%;
+  width: 100%;
   height: inherit;
 }
 .img-about-left {
@@ -107,17 +122,17 @@ body {
   height: inherit;
   object-fit: cover;
 }
-
 .block2 {
   padding: 50px;
-  width: 40%;
+  width: 100%;
+  height: auto;
   box-sizing: border-box;
-  /* max-width: 60ch; */
+  max-width: 60ch;
 }
 
 .div-about-right {
   height: inherit;
-  width: 30%;
+  width: 100%;
 }
 .img-about-right {
   width: 100%;
@@ -136,17 +151,19 @@ h2 {
 }
 
 h4 {
-    font-weight: 550;
-    font-size: 12.5px;
-    letter-spacing: 10px;
+  font-weight: 550;
+  font-size: 12.5px;
+  letter-spacing: 10px;
 }
 
 h5 {
-  line-height: 15px;
-  font-weight: 500;
+  line-height: 18px;
+  font-weight: 450;
   color: var(--darkgray);
-  /* text-align: justify; */
-  /* text-justify: inter-word; */
+}
+
+.attribution h5 {
+  /* display: none; */
 }
 
 a,
@@ -154,7 +171,7 @@ a:hover,
 a:focus,
 a:active {
   text-decoration: none;
-  color: var(--verydarkgray)
+  color: var(--verydarkgray);
 }
 
 .btn-shop-now {
@@ -165,6 +182,7 @@ a:active {
 .img-arrow {
   align-self: center;
   margin-left: 20px;
-  width: 50px;
-  height: 100%;
+  width: 45px;
+  height: 15px;
+  display: block;
 }
