@@ -2,23 +2,21 @@
 
 * {
   font-family: "League Spartan", sans-serif;
-  /* border: 1px solid red; */
-  box-shadow:inset 0px 0px 0px 1px #f00;
+  transition: ease 0.15s;
+  /* box-shadow:inset 0px 0px 0px 1px #f00; */
 }
 
 @media only screen and (min-width: 1070px) {
 }
 
 html {
-  height: 100%;
-
-  /* overflow: hidden; */
+  height: auto;
 }
 
 body {
   margin: 0;
-  /* height: 100vh; */
-  min-height: 100%;
+  height: auto;
+  /* min-height: auto */
   width: 100%;
 }
 
@@ -46,7 +44,7 @@ body {
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 .btn {
@@ -64,15 +62,16 @@ body {
 }
 
 .row2 {
-  height: 35vh;
+  /* height: 35vh; */
+  height: 33.34vh;
 }
 
-.img-hero-1 {
+.img-hero-1, .img-hero-2, .img-hero-3 {
   object-fit: cover;
   width: 65%;
 }
 
-.block1-1 {
+.block1-1, .block1-2, .block1-3 {
   padding: 75px;
   width: auto;
   height: auto;
@@ -103,6 +102,9 @@ body {
 .angle-right {
   display: block;
   /* removes the gap that appears when pos. is abs. and bottom is 0 */
+}
+.angle-left:hover, .angle-right:hover {
+  background-color: var(--verydarkgray);
 }
 
 .rotateimg180 {
@@ -177,6 +179,8 @@ a:active {
 .btn-shop-now {
   display: flex;
   flex-wrap: nowrap;
+  /* width: 100%; */
+  white-space: nowrap;
 }
 
 .img-arrow {
