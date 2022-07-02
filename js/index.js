@@ -1,4 +1,5 @@
 var page = 1;
+showPage(page);
 
 function move(direction) {
     if (direction == 'prev') {
