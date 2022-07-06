@@ -86,6 +86,9 @@ function mobile() {
   set("row2", "height", "auto");
   setByClass("arrow-left-right", "left", "auto");
   setByClass("arrow-left-right", "right", "0");
+  set('block2', 'min-width', 'auto')
+  setByClass('block1', 'min-width', 'auto')
+  setByClass('arrow-left-right', 'position', 'relative')
 }
 
 function desktop() {
@@ -103,6 +106,10 @@ function desktop() {
   set("row2", "height", "33.34vh");
   setByClass("arrow-left-right", "display", "block");
   setByClass("arrow-left-right", "left", "0");
+  set('block2', 'min-width', '400px')
+  setByClass('block1', 'min-width', '350px')
+  setByClass('arrow-left-right', 'position', 'absolute')
+
 }
 
 function set(id, attr, value) {
@@ -125,9 +132,9 @@ function setByClass(class_id, attr, value) {
 }
 
 window.addEventListener("resize", function (event) {
-  checkSize("device", "max-width: 645px");
+  checkSize("device", "max-width: 800px");
   checkSize("font-size", "max-width: 2000px")
 });
-checkSize("device", "max-width: 645px");
+checkSize("device", "max-width: 800px");
 checkSize("font-size", "max-width: 2000px")
 
