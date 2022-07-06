@@ -6,11 +6,13 @@
   /* box-shadow:inset 0px 0px 0px 1px #f00; */
 }
 
-@media only screen and (min-width: 1070px) {
+@media only screen and (max-width: 800px) {
+  
 }
 
 html {
   height: auto;
+  width: auto;
 }
 
 body {
@@ -33,6 +35,12 @@ body {
   display: flex;
   margin-top: 60px;
   margin-left: 60px;
+
+  margin-left: auto;
+  margin-right: auto;
+  width: 62px;
+  left: 0;
+  right: 0;
 }
 
 .bar .btn {
@@ -54,6 +62,7 @@ body {
 .row1,
 .row2 {
   display: flex;
+  overflow: scroll;
 }
 
 .row1 {
@@ -66,16 +75,12 @@ body {
   height: 33.34vh;
 }
 
-.img-hero-1,
-.img-hero-2,
-.img-hero-3 {
-  object-fit: cover;
+.img-hero {
   width: 65%;
+  object-fit: cover;
 }
 
-.block1-1,
-.block1-2,
-.block1-3 {
+.block1 {
   padding: 75px;
   width: auto;
   height: auto;
@@ -97,7 +102,7 @@ body {
 .img-icon-angle {
   background-color: black;
   padding: 20px 25px 20px 25px;
-  width: 12px;
+  width: 9px;
 }
 .angle-left {
   float: left;
@@ -135,6 +140,7 @@ body {
   height: auto;
   box-sizing: border-box;
   max-width: 60ch;
+  overflow: scroll;
 }
 
 .div-about-right {
@@ -187,6 +193,10 @@ a:active {
   /* width: 100%; */
   white-space: nowrap;
 }
+.btn-shop-now:hover {
+  /* color: var(--darkgray); */
+  filter: invert(81%) sepia(26%) saturate(0%) hue-rotate(222deg) brightness(76%) contrast(87%);
+}
 
 .img-arrow {
   align-self: center;
@@ -194,4 +204,28 @@ a:active {
   width: 45px;
   height: 15px;
   display: block;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  /* color: #0087ca; */
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--white);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }

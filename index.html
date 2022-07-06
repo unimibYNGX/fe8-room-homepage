@@ -16,22 +16,22 @@
     <title>Frontend Mentor | Room homepage</title>
   </head>
   <body>
-    <div class="bar">
-      <img src="images/logo.svg" alt="" class="btn logo" />
-      <div class="btn">home</div>
-      <div class="btn">shop</div>
-      <div class="btn">about</div>
-      <div class="btn">contact</div>
+    <div class="bar" id="bar">
+      <img src="images/logo.svg" alt="" class="btn logo" id="logo"/>
+      <div class="btn hover-underline-animation barbtn">home</div>
+      <div class="btn hover-underline-animation barbtn">shop</div>
+      <div class="btn hover-underline-animation barbtn">about</div>
+      <div class="btn hover-underline-animation barbtn">contact</div>
     </div>
 
-    <div class="row1">
-      <img
-        src="images/desktop-image-hero-1.jpg"
-        alt=""
-        class="img-hero-1"
-        id="img-hero-1"
-      />
-      <div class="block1-1" id="block1-1">
+    <div class="row1" id="row1">
+        <img
+          src="images/desktop-image-hero-1.jpg"
+          alt=""
+          class="img-hero"
+          id="img-hero-1"
+        />
+      <div class="block1" id="block1-1">
         <h1>Discover innovative ways to decorate</h1>
         <h5>
           We provide unmatched quality, comfort, and style for property owners
@@ -53,9 +53,9 @@
             onclick="move('prev')"
           />
           <img
-            src="images/icon-angle-left.svg"
+            src="images/icon-angle-right.svg"
             alt=""
-            class="btn img-icon-angle rotateimg180 angle-right"
+            class="btn img-icon-angle angle-right"
             onclick="move('next')"
           />
         </div>
@@ -64,10 +64,11 @@
       <img
         src="images/desktop-image-hero-2.jpg"
         alt=""
-        class="img-hero-2 hide"
+        class="img-hero hide"
         id="img-hero-2"
       />
-      <div class="block1-2 hide" id="block1-2">
+      
+      <div class="block1 hide" id="block1-2">
         <h1>We are available all across the globe</h1>
         <h5>
           With stores all over the world, it's easy for you to find furniture
@@ -98,10 +99,11 @@
       <img
         src="images/desktop-image-hero-3.jpg"
         alt=""
-        class="img-hero-3 hide"
+        class="img-hero hide"
         id="img-hero-3"
       />
-      <div class="block1-3 hide" id="block1-3">
+      
+      <div class="block1 hide" id="block1-3">
         <h1>Manufactured with the best materials</h1>
         <h5>
           Our modern furniture store provide a high level of quality. Our
@@ -131,7 +133,7 @@
       </div>
     </div>
 
-    <div class="row2">
+    <div class="row2" id="row2">
       <div class="div-about-left">
         <img src="images/image-about-dark.jpg" alt="" class="img-about-left" />
       </div>
