@@ -78,10 +78,10 @@ function desktop() {
   console.log("[desktop mode]");
 
   setByClass('barbtn', 'display', 'inline-block')
-  set("row1", "overflow", "scroll");
+  set("row1", "overflow", "auto");
   set("row1", "flex-wrap", "nowrap");
   setByClass("img-hero", "width", "65%");
-  set('row2', 'overflow', 'scroll')
+  set('row2', 'overflow', 'hidden')
   set('row2', 'flex-wrap', 'nowrap')
   setByClass('block1', 'padding', '75px')
   setByClass('block2', 'padding' , '30px')

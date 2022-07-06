@@ -20,6 +20,15 @@ body {
   height: auto;
   /* min-height: auto */
   width: 100%;
+
+  /*firefox*/
+  scrollbar-width: none;
+  /*IE 10+*/
+  -ms-overflow-style: none;
+}
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 :root {
@@ -62,7 +71,7 @@ body {
 .row1,
 .row2 {
   display: flex;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .row1 {
@@ -140,7 +149,7 @@ body {
   height: auto;
   box-sizing: border-box;
   max-width: 60ch;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .div-about-right {
