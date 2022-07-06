@@ -7,7 +7,7 @@
   user-select: none;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 2000px) {
   * {
     /* small */
     --h1-size: 30px;
@@ -24,15 +24,15 @@
 
 /* big */
 :root {
-  --h1-size: 70px;
-  --h2-size: 27px;
-  --h4-size: 35px;
+  --h1-size: 50px;
+  --h2-size: 20px;
+  --h4-size: 30px;
   --h5-size: 30px;
-  --h5-lh: 40px;
+  --h5-lh: 35px;
 
-  --icon-angle-padding: 40px 50px 40px 50px;
-  --icon-angle-width: 26px;
-  --barbtn-size: 45px;
+  --icon-angle-padding: 20px 25px 20px 25px;
+  --icon-angle-width: 14px;
+  --barbtn-size: 35px;
 }
 
 .barbtn {

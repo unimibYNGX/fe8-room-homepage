@@ -126,8 +126,8 @@ function setByClass(class_id, attr, value) {
 
 window.addEventListener("resize", function (event) {
   checkSize("device", "max-width: 645px");
-  checkSize("font-size", "max-width: 1440px")
+  checkSize("font-size", "max-width: 2000px")
 });
 checkSize("device", "max-width: 645px");
-checkSize("font-size", "max-width: 1440px")
+checkSize("font-size", "max-width: 2000px")
 
