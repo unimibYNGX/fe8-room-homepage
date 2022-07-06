@@ -68,6 +68,7 @@ body {
   height: auto;
   /* min-height: auto */
   width: 100%;
+  min-width: 275px;
 
   /*firefox*/
   scrollbar-width: none;
@@ -95,7 +96,7 @@ body::-webkit-scrollbar {
 
   margin-left: auto;
   margin-right: auto;
-  width: 62px;
+  width: 81.92px;
   left: 0;
   right: 0;
 }
@@ -150,7 +151,7 @@ body::-webkit-scrollbar {
 
   position: relative;
 
-  min-width: 350px;
+  min-width: 430px;
 }
 /*child*/
 .arrow-left-right {

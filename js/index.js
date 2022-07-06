@@ -59,7 +59,7 @@ function checkSize(request, query) {
 }
 
 function small() {
-  set('bar', 'width', '100px')
+  set('bar', 'width', '81.92px')
   set('logo', 'height', '18.5px')
 
 }
@@ -107,7 +107,7 @@ function desktop() {
   setByClass("arrow-left-right", "display", "block");
   setByClass("arrow-left-right", "left", "0");
   set('block2', 'min-width', '400px')
-  setByClass('block1', 'min-width', '350px')
+  setByClass('block1', 'min-width', '430px')
   setByClass('arrow-left-right', 'position', 'absolute')
 
 }
