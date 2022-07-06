@@ -17,7 +17,7 @@
   </head>
   <body>
     <div class="bar" id="bar">
-      <img src="images/logo.svg" alt="" class="btn logo" id="logo"/>
+      <img src="images/logo.svg" alt="" class="btn logo" id="logo" draggable="false"/>
       <div class="btn hover-underline-animation barbtn">home</div>
       <div class="btn hover-underline-animation barbtn">shop</div>
       <div class="btn hover-underline-animation barbtn">about</div>
@@ -30,6 +30,7 @@
           alt=""
           class="img-hero"
           id="img-hero-1"
+          draggable="false"
         />
       <div class="block1" id="block1-1">
         <h1>Discover innovative ways to decorate</h1>
@@ -42,7 +43,7 @@
         </h5>
         <div class="btn btn-shop-now">
           <h4>SHOP NOW</h4>
-          <img src="images/icon-arrow.svg" class="img-arrow" />
+          <img src="images/icon-arrow.svg" class="img-arrow" draggable="false"/>
         </div>
 
         <div class="arrow-left-right">
@@ -51,12 +52,14 @@
             alt=""
             class="btn img-icon-angle angle-left"
             onclick="move('prev')"
+            draggable="false"
           />
           <img
             src="images/icon-angle-right.svg"
             alt=""
             class="btn img-icon-angle angle-right"
             onclick="move('next')"
+            draggable="false"
           />
         </div>
       </div>
@@ -66,6 +69,7 @@
         alt=""
         class="img-hero hide"
         id="img-hero-2"
+        draggable="false"
       />
       
       <div class="block1 hide" id="block1-2">
@@ -78,7 +82,7 @@
         </h5>
         <div class="btn btn-shop-now">
           <h4>SHOP NOW</h4>
-          <img src="images/icon-arrow.svg" class="img-arrow" />
+          <img src="images/icon-arrow.svg" class="img-arrow" draggable="false"/>
         </div>
         <div class="arrow-left-right">
           <img
@@ -86,12 +90,14 @@
             alt=""
             class="btn img-icon-angle angle-left"
             onclick="move('prev')"
+            draggable="false"
           />
           <img
-            src="images/icon-angle-left.svg"
+            src="images/icon-angle-right.svg"
             alt=""
-            class="btn img-icon-angle rotateimg180 angle-right"
+            class="btn img-icon-angle angle-right"
             onclick="move('next')"
+            draggable="false"
           />
         </div>
       </div>
@@ -101,6 +107,7 @@
         alt=""
         class="img-hero hide"
         id="img-hero-3"
+        draggable="false"
       />
       
       <div class="block1 hide" id="block1-3">
@@ -114,7 +121,7 @@
         </h5>
         <div class="btn btn-shop-now">
           <h4>SHOP NOW</h4>
-          <img src="images/icon-arrow.svg" class="img-arrow" />
+          <img src="images/icon-arrow.svg" class="img-arrow" draggable="false"/>
         </div>
         <div class="arrow-left-right">
           <img
@@ -122,12 +129,14 @@
             alt=""
             class="btn img-icon-angle angle-left"
             onclick="move('prev')"
+            draggable="false"
           />
           <img
-            src="images/icon-angle-left.svg"
+            src="images/icon-angle-right.svg"
             alt=""
-            class="btn img-icon-angle rotateimg180 angle-right"
+            class="btn img-icon-angle angle-right"
             onclick="move('next')"
+            draggable="false"
           />
         </div>
       </div>
@@ -135,10 +144,12 @@
 
     <div class="row2" id="row2">
       <div class="div-about-left">
-        <img src="images/image-about-dark.jpg" alt="" class="img-about-left" />
+        <img src="images/image-about-dark.jpg" alt="" class="img-about-left" draggable="false"/>
       </div>
-      <div class="block2">
-        <h2>ABOUT OUR FURNITURE</h2>
+      <div class="block2" id="block2">
+        <div class="txt-about" id="txt-about">
+          <h2>ABOUT OUR FURNITURE</h2>
+        </div>
         <h5>
           Our multifunctional collection blends design and function to suit your
           individual taste. Make each room unique, or pick a cohesive theme that
@@ -163,6 +174,7 @@
           src="images/image-about-light.jpg"
           alt=""
           class="img-about-right"
+          draggable="false"
         />
       </div>
     </div>

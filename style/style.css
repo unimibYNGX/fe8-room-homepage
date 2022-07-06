@@ -4,10 +4,39 @@
   font-family: "League Spartan", sans-serif;
   transition: ease 0.15s;
   /* box-shadow:inset 0px 0px 0px 1px #f00; */
+  user-select: none;
 }
 
-@media only screen and (max-width: 800px) {
-  
+@media only screen and (max-width: 1400px) {
+  * {
+    /* small */
+    --h1-size: 30px;
+    --h2-size: 16px;
+    --h4-size: 12.5px;
+    --h5-size: 14.5px;
+    --h5-lh: 20px;
+
+    --icon-angle-padding: 20px 25px 20px 25px;
+    --icon-angle-width: 9px;
+    --barbtn-size: 20px;
+  }
+}
+
+/* big */
+:root {
+  --h1-size: 70px;
+  --h2-size: 27px;
+  --h4-size: 35px;
+  --h5-size: 30px;
+  --h5-lh: 40px;
+
+  --icon-angle-padding: 40px 50px 40px 50px;
+  --icon-angle-width: 26px;
+  --barbtn-size: 45px;
+}
+
+.barbtn {
+  font-size: var(--barbtn-size);
 }
 
 html {
@@ -110,8 +139,8 @@ body::-webkit-scrollbar {
 }
 .img-icon-angle {
   background-color: black;
-  padding: 20px 25px 20px 25px;
-  width: 9px;
+  padding: var(--icon-angle-padding);
+  width: var(--icon-angle-width);
 }
 .angle-left {
   float: left;
@@ -150,6 +179,9 @@ body::-webkit-scrollbar {
   box-sizing: border-box;
   max-width: 60ch;
   overflow: auto;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* display: flex; */
 }
 
 .div-about-right {
@@ -165,27 +197,26 @@ body::-webkit-scrollbar {
 h1 {
   letter-spacing: -0.5px;
   font-weight: 600;
+  font-size: var(--h1-size);
 }
 
 h2 {
+  line-height: var(--h2-lh);
+  font-size: var(--h2-size);
   letter-spacing: 5px;
-  font-size: 16px;
 }
 
 h4 {
   font-weight: 550;
-  font-size: 12.5px;
+  font-size: var(--h4-size);
   letter-spacing: 10px;
 }
 
 h5 {
-  line-height: 18px;
+  line-height: var(--h5-lh);
   font-weight: 450;
   color: var(--darkgray);
-}
-
-.attribution h5 {
-  /* display: none; */
+  font-size: var(--h5-size);
 }
 
 a,
@@ -204,7 +235,8 @@ a:active {
 }
 .btn-shop-now:hover {
   /* color: var(--darkgray); */
-  filter: invert(81%) sepia(26%) saturate(0%) hue-rotate(222deg) brightness(76%) contrast(87%);
+  filter: invert(81%) sepia(26%) saturate(0%) hue-rotate(222deg) brightness(76%)
+    contrast(87%);
 }
 
 .img-arrow {
@@ -222,7 +254,7 @@ a:active {
 }
 
 .hover-underline-animation:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);
