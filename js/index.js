@@ -13,61 +13,71 @@ function move(direction) {
   showPage(page);
 }
 
-function hide(id) {
-  document.getElementById(id).classList.add("hide");
+function add(name, id) {
+  document.getElementById(id).classList.add(name);
 }
+
+function remove(name, id) {
+  document.getElementById(id).classList.remove(name);
+}
+
 function show(id) {
-  document.getElementById(id).classList.remove("hide");
+  remove('hide', id)
 }
-function hideByClass(class_id) {
+
+function hide(id) {
+  add('hide', id)
+}
+
+function addByClass(name, class_id) {
   var els = document.getElementsByClassName(class_id);
   for (let i = 0; i < els.length; i++) {
     const element = els[i];
-    element.classList.add("hide");
+    element.classList.add(name);
   }
 }
-function showByClass(class_id) {
+
+function showByClass(name, class_id) {
   var els = document.getElementsByClassName(class_id);
   for (let i = 0; i < els.length; i++) {
     const element = els[i];
-    element.classList.remove("hide");
+    element.classList.remove(name);
   }
 }
 
 function showPage(n) {
   for (let index = 1; index <= 3; index++) {
-    hide("img-hero-" + index);
-    hide("block1-" + index);
+    add("hide", "img-hero-" + index);
+    add("hide", "block1-" + index);
   }
-  show("img-hero-" + n);
-  show("block1-" + n);
+  remove("hide", "img-hero-" + n);
+  remove("hide", "block1-" + n);
 }
 
 function checkSize(request, query) {
   var x = window.matchMedia("(" + query + ")");
-  switch(request) {
-    case 'device': 
-      x.matches ? mobile() : desktop()
-      break
-    case 'font-size':
-      x.matches ? small() : big()
-      break
+  switch (request) {
+    case "device":
+      x.matches ? mobile() : desktop();
+      break;
+    case "font-size":
+      x.matches ? small() : big();
+      break;
     default:
-      console.log("request not recognized")
-      break
+      console.log("request not recognized");
+      break;
   }
 }
 
 function small() {
-  set('bar', 'width', '81.92px')
-  set('logo', 'height', '18.5px')
-
+  set("bar", "width", "81.92px");
+  set("logo", "height", "18.5px");
 }
 
 function big() {
-  set('block2', 'padding', '80px')
-  set('bar', 'width', '80px')
-  set('logo', 'height', '38px')
+  set("block2", "padding", "80px");
+  set("bar", "width", "80px");
+  set("logo", "height", "38px");
 }
 
 function mobile() {
@@ -86,9 +96,11 @@ function mobile() {
   set("row2", "height", "auto");
   setByClass("arrow-left-right", "left", "auto");
   setByClass("arrow-left-right", "right", "0");
-  set('block2', 'min-width', 'auto')
-  setByClass('block1', 'min-width', 'auto')
-  setByClass('arrow-left-right', 'position', 'relative')
+  set("block2", "min-width", "auto");
+  setByClass("block1", "min-width", "auto");
+  setByClass("arrow-left-right", "position", "relative");
+  remove("hide", "hamburger");
+  show('sidenav')
 }
 
 function desktop() {
@@ -106,10 +118,11 @@ function desktop() {
   set("row2", "height", "33.34vh");
   setByClass("arrow-left-right", "display", "block");
   setByClass("arrow-left-right", "left", "0");
-  set('block2', 'min-width', '400px')
-  setByClass('block1', 'min-width', '430px')
-  setByClass('arrow-left-right', 'position', 'absolute')
-
+  set("block2", "min-width", "400px");
+  setByClass("block1", "min-width", "430px");
+  setByClass("arrow-left-right", "position", "absolute");
+  add("hide", "hamburger");
+  hide('sidenav')
 }
 
 function set(id, attr, value) {
@@ -131,10 +144,44 @@ function setByClass(class_id, attr, value) {
   }
 }
 
+var isOpen = false;
+function sidenavToggle() {
+  if (!isOpen) {
+    down("sidenav");
+    isOpen = true;
+  } else {
+    up("sidenav");
+    isOpen = false;
+  }
+}
+function up(id) {
+  document.getElementById(id).classList.add("up");
+  document.getElementById(id).classList.remove("down");
+}
+function down(id) {
+  document.getElementById(id).classList.add("down");
+  document.getElementById(id).classList.remove("up");
+}
+function downByClass(class_id) {
+  var els = document.getElementsByClassName(class_id);
+  for (let i = 0; i < els.length; i++) {
+    const element = els[i];
+    element.classList.add("down");
+    element.classList.remove("up");
+  }
+}
+function upByClass(class_id) {
+  var els = document.getElementsByClassName(class_id);
+  for (let i = 0; i < els.length; i++) {
+    const element = els[i];
+    element.classList.add("up");
+    element.classList.remove("down");
+  }
+}
+
 window.addEventListener("resize", function (event) {
   checkSize("device", "max-width: 800px");
-  checkSize("font-size", "max-width: 2000px")
+  checkSize("font-size", "max-width: 2000px");
 });
 checkSize("device", "max-width: 800px");
-checkSize("font-size", "max-width: 2000px")
-
+checkSize("font-size", "max-width: 2000px");
