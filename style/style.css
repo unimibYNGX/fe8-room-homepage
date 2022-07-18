@@ -3,7 +3,6 @@
 * {
   font-family: "League Spartan", sans-serif;
   transition: ease 0.15s;
-  /* box-shadow:inset 0px 0px 0px 1px #f00; */
   user-select: none;
 }
 
@@ -35,7 +34,6 @@
     color: lightblue;
   }
   .btn-shop-now:hover {
-    /* color: var(--darkgray); */
     filter: invert(81%) sepia(26%) saturate(0%) hue-rotate(222deg)
       brightness(76%) contrast(87%);
   }
@@ -97,14 +95,12 @@
   font-weight: 550;
 }
 .up {
-  /* transform: scaleY(0); */
   max-height: 0;
   transition: max-height 0.3s ease-out;
   overflow: hidden;
   background: white;
 }
 .down {
-  /* transform: scaleY(1); */
   max-height: 75px;
   transition: max-height 0.3s ease-in;
 }
@@ -121,7 +117,6 @@ html {
 body {
   margin: 0;
   height: auto;
-  /* min-height: auto */
   width: 100%;
   min-width: 275px;
 
@@ -180,12 +175,10 @@ body::-webkit-scrollbar {
 }
 
 .row1 {
-  /* height: 60%; */
   height: 66.66vh;
 }
 
 .row2 {
-  /* height: 35vh; */
   height: 33.34vh;
 }
 
@@ -209,7 +202,7 @@ body::-webkit-scrollbar {
 
   min-width: 430px;
 }
-/*child*/
+
 .arrow-left-right {
   position: absolute;
   left: 0;
@@ -257,9 +250,6 @@ body::-webkit-scrollbar {
 
   padding-bottom: 0px !important;
   min-width: 400px;
-  /* flex-direction: column; */
-  /* justify-content: center; */
-  /* display: flex; */
 }
 
 .div-about-right {
@@ -307,7 +297,6 @@ a:active {
 .btn-shop-now {
   display: flex;
   flex-wrap: nowrap;
-  /* width: 100%; */
   white-space: nowrap;
 }
 
@@ -322,7 +311,6 @@ a:active {
 .hover-underline-animation {
   display: inline-block;
   position: relative;
-  /* color: #0087ca; */
 }
 
 .hover-underline-animation:after {
